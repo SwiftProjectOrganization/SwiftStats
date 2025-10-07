@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D4BFCCD72E94613C0079E0F3 /* StatKit in Frameworks */ = {isa = PBXBuildFile; productRef = D4BFCCD62E94613C0079E0F3 /* StatKit */; };
 		D4BFCCDA2E94618E0079E0F3 /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = D4BFCCD92E94618E0079E0F3 /* CodableCSV */; };
-		D4BFCD402E9552AC0079E0F3 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = D4BFCD3F2E95529E0079E0F3 /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,7 +251,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BFCD402E9552AC0079E0F3 /* Readme.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
