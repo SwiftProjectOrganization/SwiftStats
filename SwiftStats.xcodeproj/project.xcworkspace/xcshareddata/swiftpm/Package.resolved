@@ -1,0 +1,33 @@
+{
+  "originHash" : "c0bc6fdb5fd2270edbeadfb30e7a079e89afc36cf359a8c02e2c80ad7233f974",
+  "pins" : [
+    {
+      "identity" : "codablecsv",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dehesa/CodableCSV.git",
+      "state" : {
+        "revision" : "99ace2cfdfbc19108b529c021005fb57a460e715",
+        "version" : "0.6.7"
+      }
+    },
+    {
+      "identity" : "statkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JimmyMAndersson/StatKit",
+      "state" : {
+        "revision" : "11e38775ffaae86b4e46af146e4abc0debbf1687",
+        "version" : "0.7.1"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics.git",
+      "state" : {
+        "revision" : "0c0290ff6b24942dadb83a929ffaaa1481df04a2",
+        "version" : "1.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D4BFCCD72E94613C0079E0F3 /* StatKit in Frameworks */ = {isa = PBXBuildFile; productRef = D4BFCCD62E94613C0079E0F3 /* StatKit */; };
+		D4BFCCDA2E94618E0079E0F3 /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = D4BFCCD92E94618E0079E0F3 /* CodableCSV */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D4BFCCB92E9460DC0079E0F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BFCCDA2E94618E0079E0F3 /* CodableCSV in Frameworks */,
+				D4BFCCD72E94613C0079E0F3 /* StatKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = SwiftStats;
 			packageProductDependencies = (
+				D4BFCCD62E94613C0079E0F3 /* StatKit */,
+				D4BFCCD92E94618E0079E0F3 /* CodableCSV */,
 			);
 			productName = SwiftStats;
 			productReference = D4BFCCAB2E9460DB0079E0F3 /* SwiftStats.app */;
@@ -195,6 +204,10 @@
 			);
 			mainGroup = D4BFCCA22E9460DB0079E0F3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D4BFCCD52E94613C0079E0F3 /* XCRemoteSwiftPackageReference "StatKit" */,
+				D4BFCCD82E94618E0079E0F3 /* XCRemoteSwiftPackageReference "CodableCSV" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D4BFCCAC2E9460DB0079E0F3 /* Products */;
 			projectDirPath = "";
@@ -413,11 +426,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -445,11 +461,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -573,6 +592,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4BFCCD52E94613C0079E0F3 /* XCRemoteSwiftPackageReference "StatKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JimmyMAndersson/StatKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+		D4BFCCD82E94618E0079E0F3 /* XCRemoteSwiftPackageReference "CodableCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dehesa/CodableCSV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4BFCCD62E94613C0079E0F3 /* StatKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4BFCCD52E94613C0079E0F3 /* XCRemoteSwiftPackageReference "StatKit" */;
+			productName = StatKit;
+		};
+		D4BFCCD92E94618E0079E0F3 /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4BFCCD82E94618E0079E0F3 /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4BFCCA32E9460DB0079E0F3 /* Project object */;
 }
