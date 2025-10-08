@@ -1,4 +1,4 @@
-///: # SwiftStats
+///: # SwiftStats: Foundation models
 /*:
  # Table of Contents
  * [FoundationModel](01Model)
