@@ -35,9 +35,22 @@
 		D4BFCD3F2E95529E0079E0F3 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D4AC22602E9AA10700A99C7A /* Exceptions for "SwiftStats" folder in "SwiftStats" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Playgrounds/Charts.swiftpm,
+			);
+			target = D4BFCCAA2E9460DB0079E0F3 /* SwiftStats */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D4BFCCAD2E9460DB0079E0F3 /* SwiftStats */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D4AC22602E9AA10700A99C7A /* Exceptions for "SwiftStats" folder in "SwiftStats" target */,
+			);
 			path = SwiftStats;
 			sourceTree = "<group>";
 		};
