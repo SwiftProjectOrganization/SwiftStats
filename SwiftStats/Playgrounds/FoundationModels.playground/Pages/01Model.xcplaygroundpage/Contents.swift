@@ -1,7 +1,6 @@
 //: # SwiftStats
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 //: ## 01 FoundationModel
-
 import Foundation
 import FoundationModels
 

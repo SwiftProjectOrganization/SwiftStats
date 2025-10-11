@@ -1,8 +1,6 @@
 //: # SwiftStats
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 //: ## 02 Apple Intellligence available?
-
-
 import Foundation
 import FoundationModels
 

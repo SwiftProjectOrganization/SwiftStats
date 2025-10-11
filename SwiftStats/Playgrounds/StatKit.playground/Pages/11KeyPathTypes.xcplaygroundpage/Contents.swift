@@ -1,5 +1,6 @@
-//: [Previous](@previous)
-
+//: # SwiftStats: StatKit
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
+//: ## 11 KeyPath types
 @MainActor
 func runNamesAndAges() -> (String, String, String) {
   //var names: String = ""
@@ -29,4 +30,22 @@ var totalAge: String = ""
 (names, ages, totalAge) = runNamesAndAges()
 
 
-//: [Next](@next)
+let people = DataLoader.load(
+  Person.self,
+  from: .testpeople
+)
+
+let partialkeys: [PartialKeyPath<Person>] = [
+  \Person.name,
+  \Person.age
+]
+
+for _ in 1 ... 5 {
+  guard
+    let randomKey = partialkeys.randomElement(),
+    let person = people.randomElement()
+  else { continue }
+  let value = person[keyPath: randomKey]
+  print(value)}
+
+//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)

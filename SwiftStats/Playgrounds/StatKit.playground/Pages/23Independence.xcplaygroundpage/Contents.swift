@@ -1,9 +1,7 @@
-//: # SwiftStats
+//: # SwiftStats: StatKit
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-//: ## 03 Structured output
-import Cocoa
+//: ## 23 Independence
 
-var greeting = "Hello, playground"
-
+// No code
 
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
