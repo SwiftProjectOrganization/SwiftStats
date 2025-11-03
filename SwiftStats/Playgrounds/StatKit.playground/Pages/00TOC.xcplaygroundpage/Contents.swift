@@ -1,6 +1,7 @@
 ///: # SwiftStats: StatKit
 /*:
  # Table of Contents
+ * [Optimize](02OptimizeTypes)
  * [KeyPath types](11KeyPathTypes)
  * [Decodable protocol](12Decodable)
   * [Higher order functions](33HigherOerderFunvtions)

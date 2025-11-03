@@ -13,6 +13,8 @@ func runNamesAndAges() -> (String, String, String) {
     .map(\.name)
     .joined(separator: " and ")
   
+  let ageArray = people.map(\.age)
+  
   let ages = people
     .map(\.age)
     .map(String.init)

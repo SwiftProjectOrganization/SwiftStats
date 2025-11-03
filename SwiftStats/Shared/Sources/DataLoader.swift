@@ -12,6 +12,11 @@ public enum DataLoader {
     case multipleLinearRegression = "multiple-linear-regression"
     case houseSaleData = "house-sale-data"
     case testpeople = "testpeople"
+    case bernoulli_optimize = "bernoulli_optimize"
+    case bernoulli_samples_1 = "bernoulli_samples_1"
+    case bernoulli_samples_2 = "bernoulli_samples_2"
+    case bernoulli_samples_3 = "bernoulli_samples_3"
+    case bernoulli_samples_4 = "bernoulli_samples_4"
   }
   
   public enum TextSet: String {
