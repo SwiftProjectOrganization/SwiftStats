@@ -28,7 +28,7 @@ public struct SampleResult: Decodable {
 
 public func runSampleResult(chain: Int = 1) -> ([Double], [Double]) {
   let results = DataLoader.load(
-    OptimizeResult.self,
+    SampleResult.self,
     from: .bernoulli_samples_1
   )
   

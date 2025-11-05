@@ -13,10 +13,9 @@ public enum DataLoader {
     case houseSaleData = "house-sale-data"
     case testpeople = "testpeople"
     case bernoulli_optimize = "bernoulli_optimize"
-    case bernoulli_samples_1 = "bernoulli_samples_1"
-    case bernoulli_samples_2 = "bernoulli_samples_2"
-    case bernoulli_samples_3 = "bernoulli_samples_3"
-    case bernoulli_samples_4 = "bernoulli_samples_4"
+    case bernoulli_samples_1 = "bernoulli_samples"
+    case bernoulli_pathfinder = "bernoulli_pathfinder"
+    case bernoulli_stansummary = "bernoulli_stansummary"
   }
   
   public enum TextSet: String {
