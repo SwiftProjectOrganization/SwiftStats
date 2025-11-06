@@ -29,14 +29,22 @@ public enum DataLoader {
     
     guard
       let bundle = Bundle(identifier: "com.goedman.SwiftStats"),
-      let csvURL = bundle.url(forResource: dataset.rawValue, withExtension: "csv"),
+      let csvURL = bundle.url(forResource: dataset.rawValue, withExtension: "csv")
+    else {
+      fatalError(
+        """
+        Could not find \(dataset.rawValue).csv!
+        Check it is available in the Data folder.
+        """
+      )
+    }
+    guard
       let data = try? Data(contentsOf: csvURL),
       let content = try? decoder.decode([Content].self, from: data)
     else {
       fatalError(
         """
-        Could not find \(dataset.rawValue).csv!
-        Check that it is available in the Data folder.
+        Decoding error!
         """
       )
     }

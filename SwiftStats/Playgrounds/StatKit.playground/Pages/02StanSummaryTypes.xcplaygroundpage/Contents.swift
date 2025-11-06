@@ -8,6 +8,8 @@ bernoulli_stansummary["theta"]
 
 bernoulli_stansummary["theta"]!.mean
 
-//bernoulli_stansummary["theta"]!.rhat
+bernoulli_stansummary["theta"]!.mad
+
+bernoulli_stansummary["theta"]!.mcse
 
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next
