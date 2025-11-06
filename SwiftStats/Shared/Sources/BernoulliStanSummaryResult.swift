@@ -94,7 +94,7 @@ public func runBernoulliStanSummaryResult() -> Dictionary<String, (mean: Double,
   var varMcses: [Double?] = results
     .map(\.varMcse)
   for i in 0..<varMcses.count {
-    if varMcses[i] == -100000.0 {
+    if varMcses[i] == -100000 {
       varMcses[i] = nil
     }
   }
