@@ -1,8 +1,8 @@
 //: # SwiftStats: StatKit
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-//: ## 02 StanSummary types
+//: ## 02 Bernoulli StanSummary types
 
-let bernoulli_stansummary = runStanSummaryResult()
+let bernoulli_stansummary = runBernoulliStanSummaryResult()
 
 bernoulli_stansummary["theta"]
 

@@ -1,10 +1,10 @@
 //: # SwiftStats: StatKit
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-//: ## 01 Sample types types
+//: ## 01 Bernoulli sample types types
 
 var lp: [Double] = []
 var theta: [Double] = []
-(lp, theta) = runSampleResult()
+(lp, theta) = runBernoulliSampleResult()
 
 theta.median(variable: \.self)
 theta.mean(variable: \.self, strategy: .arithmetic)

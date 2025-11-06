@@ -1,4 +1,4 @@
-public struct OptimizeResult: Decodable {
+public struct BernoulliOptimizeResult: Decodable {
   public let lp__: Double
   public let theta: Double
   
@@ -19,9 +19,9 @@ public struct OptimizeResult: Decodable {
   }
 }
 
-public func runOptimizeResult() -> ([Double], [Double]) {
+public func runBernoulliOptimizeResult() -> ([Double], [Double]) {
   let results = DataLoader.load(
-    OptimizeResult.self,
+    BernoulliOptimizeResult.self,
     from: .bernoulli_optimize
   )
   

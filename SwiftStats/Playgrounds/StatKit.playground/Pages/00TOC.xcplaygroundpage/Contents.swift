@@ -1,9 +1,9 @@
 ///: # SwiftStats: StatKit
 /*:
  # Table of Contents
- * [Samples](01SampleTypes)
- * [StanSummary](02StanSummaryTypes)
- * [Optimize](03OptimizeTypes)
+ * [BernoulliSamples](01BernoulliSampleTypes)
+ * [BernoulliStanSummary](02BernoulliStanSummaryTypes)
+ * [BernoulliOptimize](03BernoulliOptimizeTypes)
  * [KeyPath types](11KeyPathTypes)
  * [Decodable protocol](12Decodable)
  * [Higher order functions](13HigherOrderFunvtions)

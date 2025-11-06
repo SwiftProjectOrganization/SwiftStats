@@ -5,7 +5,7 @@
 //  Created by Robert Goedman on 11/3/25.
 //
 
-public struct SampleResult: Decodable {
+public struct BernoulliSampleResult: Decodable {
   public let lp__: Double
   public let theta: Double
   
@@ -26,10 +26,10 @@ public struct SampleResult: Decodable {
   }
 }
 
-public func runSampleResult(chain: Int = 1) -> ([Double], [Double]) {
+public func runBernoulliSampleResult() -> ([Double], [Double]) {
   let results = DataLoader.load(
-    SampleResult.self,
-    from: .bernoulli_samples_1
+    BernoulliSampleResult.self,
+    from: .bernoulli_samples
   )
   
   let lp: [Double] = results

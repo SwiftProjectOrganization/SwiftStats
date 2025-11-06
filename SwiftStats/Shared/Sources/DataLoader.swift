@@ -13,7 +13,7 @@ public enum DataLoader {
     case houseSaleData = "house-sale-data"
     case testpeople = "testpeople"
     case bernoulli_optimize = "bernoulli_optimize"
-    case bernoulli_samples_1 = "bernoulli_samples"
+    case bernoulli_samples = "bernoulli_samples"
     case bernoulli_pathfinder = "bernoulli_pathfinder"
     case bernoulli_stansummary = "bernoulli_stansummary"
   }
