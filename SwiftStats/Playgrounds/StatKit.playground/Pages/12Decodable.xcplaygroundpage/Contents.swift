@@ -4,24 +4,6 @@
 import Foundation
 import CodableCSV
 
-struct Person: Decodable {
-  let name: String
-  let age: Int
-  enum CodingKeys: String, CodingKey {
-    case name = "name"
-    case age = "age"
-  }
-  
-  init(from decoder: Decoder) throws {
-    let container = try decoder
-      .container(keyedBy: CodingKeys.self)
-    self.name = try container
-      .decode(String.self, forKey: .name)
-    self.age = try container
-     .decode(Int.self, forKey: .age)
-  }
-}
-
 let decoder = CSVDecoder { config in
   config.headerStrategy = .firstLine
 }
@@ -34,7 +16,7 @@ let csvFile = Bundle(identifier: "com.goedman.SwiftStats")?
 
 do {
   let people = try decoder
-    .decode([Person].self, from: csvFile!)
+    .decode([TestPerson].self, from: csvFile!)
   for person in people {
     print(person)
   }

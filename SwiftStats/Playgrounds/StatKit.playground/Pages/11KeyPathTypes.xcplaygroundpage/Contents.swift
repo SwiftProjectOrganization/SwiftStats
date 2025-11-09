@@ -33,13 +33,13 @@ var totalAge: String = ""
 
 
 let people = DataLoader.load(
-  Person.self,
+  TestPerson.self,
   from: .testpeople
 )
 
-let partialkeys: [PartialKeyPath<Person>] = [
-  \Person.name,
-  \Person.age
+let partialkeys: [PartialKeyPath<TestPerson>] = [
+  \TestPerson.name,
+  \TestPerson.age
 ]
 
 for _ in 1 ... 5 {
