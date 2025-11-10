@@ -2,7 +2,7 @@
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 //: ## 02 Bernoulli StanSummary types
 
-let bernoulli_stansummary = runBernoulliStanSummaryResult()
+let bernoulli_stansummary = readBernoulliStanSummary()
 
 bernoulli_stansummary["theta"]
 

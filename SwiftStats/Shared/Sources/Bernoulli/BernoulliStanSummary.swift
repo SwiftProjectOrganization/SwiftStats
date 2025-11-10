@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct BernoulliStanSummaryResult: Decodable {
+public struct BernoulliStanSummary: Decodable {
   public let varName: String
   public let varMean: Double
   public let varMcse: Double?
@@ -79,9 +79,9 @@ public struct BernoulliStanSummaryResult: Decodable {
   }
 }
 
-public func runBernoulliStanSummaryResult() -> Dictionary<String, (mean: Double, mcse: Double?, std: Double, mad: Double, p05: Double?, p50: Double?, p95: Double?, ess_bulk: Double?, ess_tail: Double?, ess_bulk_per_s: Double?, rhat: Double?)> {
-  let results = DataLoader.load(
-    BernoulliStanSummaryResult.self,
+public func readBernoulliStanSummary() -> Dictionary<String, (mean: Double, mcse: Double?, std: Double, mad: Double, p05: Double?, p50: Double?, p95: Double?, ess_bulk: Double?, ess_tail: Double?, ess_bulk_per_s: Double?, rhat: Double?)> {
+  let results = BernoulliDataLoader.load(
+    BernoulliStanSummary.self,
     from: .bernoulli_stansummary
   )
 

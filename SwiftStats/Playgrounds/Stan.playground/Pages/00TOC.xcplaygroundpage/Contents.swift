@@ -1,7 +1,7 @@
 ///: # SwiftStats: StatKit
 /*:
  # Table of Contents
- * [BernoulliSamples](01BernoulliSampleTypes)
- * [BernoulliStanSummary](02BernoulliStanSummaryTypes)
- * [BernoulliOptimize](03BernoulliOptimizeTypes)
+ * [BernoulliSamples](01BernoulliSamples)
+ * [BernoulliStanSummary](02BernoulliStanSummary)
+ * [BernoulliOptimize](03BernoulliOptimize)
 */

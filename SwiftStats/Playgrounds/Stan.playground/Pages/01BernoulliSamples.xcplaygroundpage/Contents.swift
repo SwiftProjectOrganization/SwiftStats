@@ -4,7 +4,7 @@
 
 var lp: [Double] = []
 var theta: [Double] = []
-(lp, theta) = runBernoulliSampleResult()
+(lp, theta) = readBernoulliSamples()
 
 theta.median(variable: \.self)
 theta.mean(variable: \.self, strategy: .arithmetic)
