@@ -5,10 +5,6 @@ public enum DataLoader {
   
   public enum DataSet: String {
     case testpeople = "testpeople"
-    case bernoulli_optimize = "bernoulli_optimize"
-    case bernoulli_samples = "bernoulli_samples"
-    case bernoulli_pathfinder = "bernoulli_pathfinder"
-    case bernoulli_stansummary = "bernoulli_stansummary"
   }
   
   public static func load<Content: Decodable>(_ type: Content.Type, from dataset: DataSet) -> [Content] {
