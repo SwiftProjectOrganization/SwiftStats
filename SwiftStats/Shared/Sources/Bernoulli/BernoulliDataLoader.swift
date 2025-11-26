@@ -8,34 +8,44 @@
 import Foundation
 import CodableCSV
 
-public enum BernoulliDataLoader {
-  
+public enum StanBernoulliDataLoader {
   public enum DataSet: String {
-    case bernoulli_optimize = "bernoulli_optimize"
-    case bernoulli_samples = "bernoulli_samples"
-    case bernoulli_pathfinder = "bernoulli_pathfinder"
-    case bernoulli_stansummary = "bernoulli_stansummary"
+    case optimize = "bernoulli_optimize"
+    case samples = "bernoulli_samples"
+    case pathfinder = "bernoulli_pathfinder"
+    case stansummary = "bernoulli_stansummary"
   }
   
-  public static func load<Content: Decodable>(_ type: Content.Type, from dataset: DataSet) -> [Content] {
+  public static func load<Content: Decodable>(_ type: Content.Type,
+                                              basePath: String,
+                                              model: String,
+                                              filetype: String,
+                                              from dataset: DataSet) -> [Content] {
     let decoder = CSVDecoder {
       $0.headerStrategy = .firstLine
     }
     
-    guard
-      let bundle = Bundle(identifier: "com.goedman.SwiftStats"),
-      let csvURL = bundle.url(forResource: dataset.rawValue, withExtension: "csv")
-    else {
+    let fileManager = FileManager.default
+    let documentsUrl = fileManager.urls(for: .documentDirectory,
+                                        in: .userDomainMask)[0] as NSURL
+    let dirUrl = documentsUrl.appendingPathComponent(basePath + "/" + model)
+    let modelPath: String = "\(dirUrl!.path)/\(model)"
+    let filePath: String? = modelPath + "_" + filetype + ".csv"
+    let csvUrl: URL
+    
+    if fileManager.fileExists(atPath: filePath!) {
+      csvUrl = URL(fileURLWithPath: filePath!)
+    } else {
       fatalError(
         """
-        Could not find \(dataset.rawValue).csv!
-        Check it is available in the Data folder.
+        Could not find \(String(describing: filePath))
+        Check it is available in the \(String(describing: filePath)).
         """
       )
     }
-    print(bundle.bundleURL)
+    
     guard
-      let data = try? Data(contentsOf: csvURL),
+      let data = try? Data(contentsOf: csvUrl),
       let content = try? decoder.decode([Content].self, from: data)
     else {
       fatalError(
@@ -44,7 +54,6 @@ public enum BernoulliDataLoader {
         """
       )
     }
-    
     return content
   }
 }

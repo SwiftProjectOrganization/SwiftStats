@@ -5,7 +5,9 @@
 //  Created by Robert Goedman on 11/3/25.
 //
 
-public struct BernoulliSamples: Decodable {
+import Foundation
+
+public struct StanBernoulliSamples: Decodable {
   public let lp__: Double
   public let theta: Double
   
@@ -26,10 +28,16 @@ public struct BernoulliSamples: Decodable {
   }
 }
 
-public func readBernoulliSamples() -> ([Double], [Double]) {
-  let results = BernoulliDataLoader.load(
-    BernoulliSamples.self,
-    from: .bernoulli_samples
+public func readStanBernoulliSamples(basePath: String,
+                                     model: String,
+                                     filetype: String) -> ([Double], [Double]) {
+  
+  let results = StanBernoulliDataLoader.load(
+    StanBernoulliSamples.self,
+    basePath: basePath,
+    model: model,
+    filetype: filetype,
+    from: .samples
   )
   
   let lp: [Double] = results

@@ -2,7 +2,13 @@
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 //: ## 02 Bernoulli StanSummary types
 
-let bernoulli_stansummary = readBernoulliStanSummary()
+let basePath = "Stan"
+let model = "bernoulli"
+
+let bernoulli_stansummary = readBernoulliStanSummary(
+  basePath: basePath,
+  model: model,
+  filetype: "stansummary")
 
 bernoulli_stansummary["theta"]
 

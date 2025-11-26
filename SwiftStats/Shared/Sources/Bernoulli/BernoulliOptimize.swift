@@ -19,10 +19,15 @@ public struct BernoulliOptimizeResult: Decodable {
   }
 }
 
-public func readBernoulliOptimizeResult() -> ([Double], [Double]) {
-  let results = BernoulliDataLoader.load(
+public func readBernoulliOptimizeResult(basePath: String,
+                                        model: String,
+                                        filetype: String) -> ([Double], [Double]) {
+  let results = StanBernoulliDataLoader.load(
     BernoulliOptimizeResult.self,
-    from: .bernoulli_optimize
+    basePath: basePath,
+    model: model,
+    filetype: filetype,
+    from: .optimize
   )
   
   let lp: [Double] = results

@@ -2,9 +2,17 @@
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 //: ## 01 Bernoulli sample types types
 
+//import Foundation
+
+let basePath = "Stan"
+let model = "bernoulli"
+
 var lp: [Double] = []
 var theta: [Double] = []
-(lp, theta) = readBernoulliSamples()
+(lp, theta) = readStanBernoulliSamples(
+  basePath: basePath,
+  model: model,
+  filetype: "samples")
 
 theta.median(variable: \.self)
 theta.mean(variable: \.self, strategy: .arithmetic)

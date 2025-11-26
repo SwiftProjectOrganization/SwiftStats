@@ -4,7 +4,10 @@
 
 var lp: [Double] = []
 var theta: [Double] = []
-(lp, theta) = readBernoulliOptimizeResult()
+(lp, theta) = readBernoulliOptimizeResult(
+  basePath: "Stan",
+  model: "bernoulli",
+  filetype: "optimize")
 
 // Use a named tuple
 let res = (lp: lp, theta: theta)
