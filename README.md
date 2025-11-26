@@ -12,13 +12,11 @@
 
 Exploring a possible setup and doing statistics with Swift.
 
+
 ## Details
 
 The Stan example playgrounds form an initial setup to run Stan (cmdstan, see reference 1).
 
-The StatKit example playgrounds follow reference 2 below where applicable. 
-
-The MCMC playgrounds explore MCMC. See reference 3, also the earlier parts by the same author.
 
 ## References
 
