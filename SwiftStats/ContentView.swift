@@ -38,45 +38,9 @@ extension ContentView: View {
       }
       .chartXScale(domain: -10 ... 10)
       .chartYScale(domain: -10 ... 10)
-      
       Spacer()
-      Button("Show rolls") {
-        rolls = RandomVariables.run()
-        (names, ages, totalAge) = runNamesAndAges()
-        names2 = CodableProtocol.run()
-      }
-      Spacer()
-      Text(rolls)
-      Text(names)
-      Text(ages)
-      Text(totalAge)
-      Text(names2)
     }
     .padding()
-  }
-}
-
-extension ContentView {
-  func runNamesAndAges() -> (String, String, String) {
-    //var names: String = ""
-    let people = DataLoader.load(
-      TestPerson.self,
-      from: .testpeople
-    )
-    
-    let names = people
-      .map(\.name)
-      .joined(separator: " and ")
-    
-    let ages = people
-      .map(\.age)
-      .map(String.init)
-      .joined(separator: " and ")
-    
-    let totalAge = people
-      .sum(over: \.age)
-
-    return ("Names: \(names)", "Ages: \(ages)", "Total Age: \(totalAge)")
   }
 }
 
