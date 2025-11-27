@@ -42,25 +42,24 @@ struct ChainElement: Identifiable {
 }
 
 var chain_1: [ChainElement] = []
-for i in 0...1000 {
+for i in 0...999 {
   chain_1.append(ChainElement(y: theta[i], index: i))
 }
 var chain_2: [ChainElement] = []
-for i in 2000...3000 {
+for i in 1000...1999 {
   chain_2.append(ChainElement(
-    y: theta[i], index: i - 2000))
+    y: theta[i], index: i - 1000))
 }
 var chain_3: [ChainElement] = []
-for i in 4000...5000 {
+for i in 2000...2999 {
   chain_3.append(ChainElement(
-    y: theta[i], index: i - 4000))
+    y: theta[i], index: i - 2000))
 }
 var chain_4: [ChainElement] = []
-for i in 6000...7000 {
+for i in 3000...3999 {
   chain_4.append(ChainElement(
-    y: theta[i], index: i - 6000))
+    y: theta[i], index: i - 3000))
 }
-
 
 struct ContentView: View {
   var body: some View {
