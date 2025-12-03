@@ -76,6 +76,7 @@ struct ContentView: View {
             x: .value("Obs", data.index),
             y: .value("Value", data.y)
           )
+          .lineStyle(StrokeStyle(lineWidth: 1))
         }
       }
       .chartYAxisLabel("Chain 1")
@@ -89,6 +90,7 @@ struct ContentView: View {
             x: .value("Obs", data.index),
             y: .value("Value", data.y)
           )
+          .lineStyle(StrokeStyle(lineWidth: 1))
         }
       }
       .chartYAxisLabel("Chain 2")
@@ -102,6 +104,7 @@ struct ContentView: View {
             x: .value("Obs", data.index),
             y: .value("Value", data.y)
           )
+          .lineStyle(StrokeStyle(lineWidth: 1))
         }
       }
       .chartYAxisLabel("Chain 3")
@@ -115,6 +118,7 @@ struct ContentView: View {
             x: .value("Obs", data.index),
             y: .value("Value", data.y)
           )
+          .lineStyle(StrokeStyle(lineWidth: 1))
         }
       }
       .chartYAxisLabel("Chain 4")

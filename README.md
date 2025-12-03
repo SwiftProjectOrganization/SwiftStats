@@ -15,7 +15,9 @@ Exploring a possible setup and doing statistics with Swift.
 
 ## Details
 
-The Stan example playgrounds form an initial setup to run Stan (cmdstan, see reference 1).
+The Stan example playgrounds form an initial setup to use Stan (cmdstan, see reference 1) results. Running the actual models can be done with [Stan](https://github.com/SwiftProjectOrganization/Stan).
+
+The ML playgrounds have been added for comparison (TBD).
 
 
 ## References

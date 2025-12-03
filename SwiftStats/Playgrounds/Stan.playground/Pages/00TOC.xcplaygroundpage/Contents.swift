@@ -4,4 +4,5 @@
  * [BernoulliSamples](01BernoulliSamples)
  * [BernoulliStanSummary](02BernoulliStanSummary)
  * [BernoulliOptimize](03BernoulliOptimize)
+ * [BernoulliPathfinde](04BernoulliPathfinder)
 */

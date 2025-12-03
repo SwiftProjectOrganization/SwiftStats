@@ -20,19 +20,23 @@ let df = try! DataFrame(contentsOfCSVFile: csvUrl)
 let (evalDf, trainingDf) = df.randomSplit(by: 0.2, seed: 12313)
 print(evalDf)
 
-let classifier = try MLClassifier(trainingData: df,
-                                  targetColumn: "purpose",
-                                  featureColumns: ["solarPanels", "greenhouses", "size"])
+let classifier = try MLClassifier(
+  trainingData: DataFrame(trainingDf),
+  targetColumn: "purpose",
+  featureColumns: ["solarPanels", "greenhouses", "size"])
+print(classifier)
 
-let eval = classifier.evaluation(on: df)
+let eval = classifier.evaluation(on: DataFrame(evalDf))
 let error = eval.classificationError
+print(eval)
 let accuracy = (1.0 - error) * 100
 
-let homePath = FileManager.default.homeDirectoryForCurrentUser
-let filepath = homePath.appendingPathComponent(".julia/dev/ISL/notebooks/ML models/classifier.mlmodel")
-let classifierMetadata = MLModelMetadata(author: "Rob Goedman",
-                                         shortDescription: "Constructs a classifier",
-                                         version: "0.1")
-try classifier.write(to: filepath, metadata: classifierMetadata)
+let classifierMetadata = MLModelMetadata(
+  author: "Rob Goedman",
+  shortDescription: "Predicts the purpose of a habitat on Mars.",
+  version: "1.0")
+
+try classifier.write(to: dirUrl!.appendingPathComponent("MarsHabitatClassifier.mlmodel"),
+                    metadata: classifierMetadata)
 
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
