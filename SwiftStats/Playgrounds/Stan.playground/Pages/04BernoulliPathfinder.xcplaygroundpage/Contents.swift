@@ -1,6 +1,4 @@
-//: # SwiftStats: StatKit
-//: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
-//: ## 02 Bernoulli StanSummary types
+//: [Previous](@previous)
 
 import Foundation
 import TabularData
@@ -14,9 +12,9 @@ let fileManager = FileManager.default
 let documentsUrl = fileManager.urls(for: .documentDirectory,
                                     in: .userDomainMask)[0] as NSURL
 let dirUrl = documentsUrl.appendingPathComponent("Stan/bernoulli")
-let csvUrl = dirUrl!.appendingPathComponent("bernoulli_stansummary.csv")
+let csvUrl = dirUrl!.appendingPathComponent("bernoulli_pathfinder.csv")
 
-let summary = try! DataFrame(contentsOfCSVFile: csvUrl)
-print(summary.description(options: formattingOptions))
+let pathfinder = try! DataFrame(contentsOfCSVFile: csvUrl)
+print(pathfinder.description(options: formattingOptions))
 
-//: [TOC](00TOC) | [Previous](@previous) | [Next](@next
+//: [Next](@next)

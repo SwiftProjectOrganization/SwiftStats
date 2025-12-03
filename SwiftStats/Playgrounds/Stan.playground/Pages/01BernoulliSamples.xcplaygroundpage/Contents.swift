@@ -1,33 +1,39 @@
-//: # SwiftStats: StatKit
+//: # SwiftStats: Stan
 //: [TOC](00TOC) | [Previous](@previous) | [Next](@next)
 //: ## 01 Bernoulli sample types types
 
 import SwiftUI
+import TabularData
 import PlaygroundSupport
 import Charts
-import CodableCSV
 import StatKit
 
-let basePath = "Stan"
-let model = "bernoulli"
 
-var lp: [Double] = []
+let fileManager = FileManager.default
+let documentsUrl = fileManager.urls(for: .documentDirectory,
+                                    in: .userDomainMask)[0] as NSURL
+let dirUrl = documentsUrl.appendingPathComponent("Stan/bernoulli")
+let csvUrl = dirUrl!.appendingPathComponent("bernoulli_samples.csv")
+
+let samples = try! DataFrame(contentsOfCSVFile: csvUrl)
+var formattingOptions = FormattingOptions(maximumLineWidth: 125,
+                                          maximumCellWidth: 20,
+                                          maximumRowCount: 15)
+print(samples.description(options: formattingOptions))
+
+formattingOptions = FormattingOptions(maximumLineWidth: 125,
+                                          maximumCellWidth: 20,
+                                          maximumRowCount: 5)
+let numericSummary = samples.summary(of: "theta")
+print(numericSummary.description(options: formattingOptions))
+
+print(samples.prefix(5))
 var theta: [Double] = []
-(lp, theta) = readStanBernoulliSamples(
-  basePath: basePath,
-  model: model,
-  filetype: "samples")
-
-theta.median(variable: \.self)
-theta.mean(variable: \.self, strategy: .arithmetic)
-theta.standardDeviation(variable: \.self, from: .sample)
-
-lp.mean(variable: \.self, strategy: .arithmetic)
-lp.standardDeviation(variable: \.self, from: .sample)
-
-// Use a named tuple
-let res = (lp: lp, theta: theta)
-res.theta
+for d in samples.theta {
+  theta.append(d! as! Double)
+}
+let theta_mean = theta.mean(variable: \.self, strategy: .arithmetic)
+let theta_std = theta.standardDeviation(variable: \.self, from: .sample)
 
 // Plot the chains
 struct ChainElement: Identifiable {

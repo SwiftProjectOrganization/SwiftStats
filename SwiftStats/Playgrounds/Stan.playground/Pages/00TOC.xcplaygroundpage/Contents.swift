@@ -1,4 +1,4 @@
-///: # SwiftStats: StatKit
+///: # Stan
 /*:
  # Table of Contents
  * [BernoulliSamples](01BernoulliSamples)
